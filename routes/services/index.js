@@ -6,19 +6,25 @@ const {
   rechargeRequest,
   //   rechargeStatus,
   //   dthInfoFetch,
+  fetchDthPlans,
   rechargeHistory,
   dthRequest,
   dthHistory,
   handleFailedRecharge,
-
+  commission,
   rechargeHistoryByAdmin,
   dthHistoryByAdmin,
   Get_Operator_Circle_By_Phone,
   Get_Recharge_Operator_Percent,
   BillhubComplainRaise,
   Recharge_Status_Verify,
+  fetchDthOperator,
   Recharge_All_Status_Verify,
   Update_Recharge_Commission,
+  fetchDthOperators,
+  fetchDthOpDetails,
+  userReferralList,
+  getCircleAndOperators,
 } = require("../../controllers/services/recharge");
 
 const router = require("express").Router();
@@ -41,6 +47,13 @@ router.get("/plan_fetch", tokenVerify, planFetch);
 // router.get("/get_balance", tokenVerify, getBalance);
 router.get("/dth_request", tokenVerify, dthRequest);
 router.get("/dth_history", tokenVerify, dthHistory);
+router.get("/fetch_dth_plans", tokenVerify, fetchDthPlans);
+router.get("/fetch_dth_operator", tokenVerify, fetchDthOperator);
+router.get("/fetch_dth_operators", fetchDthOperators);
+// router.get("/fetch_dth_details", tokenVerify, fetchDthOpDetails);
+router.get("/commission_list", tokenVerify, commission);
+router.get("/get_circle_operators", tokenVerify, getCircleAndOperators);
+// router.get("/user_referral_list", tokenVerify, userReferralList);
 // router.get("/get_operator", tokenVerify, getOperator);
 // router.get("/dth_info_fetch", tokenVerify, dthInfoFetch);
 // router.get("/recharge_status", tokenVerify, rechargeStatus);
@@ -51,16 +64,16 @@ router.get(
   adminTokenVerify,
   Recharge_All_Status_Verify
 );
-router.post(
-  "/recharge_commission_update",
-  adminTokenVerify,
-  Update_Recharge_Commission
-);
-router.get(
-  "/recharge-operator-percent",
-  tokenVerify,
-  Get_Recharge_Operator_Percent
-);
+// router.post(
+//   "/recharge_commission_update",
+//   adminTokenVerify,
+//   Update_Recharge_Commission
+// );
+// router.get(
+//   "/recharge-operator-percent",
+//   tokenVerify,
+//   Get_Recharge_Operator_Percent
+// );
 router.get("/recharge-complain-billhub", tokenVerify, BillhubComplainRaise);
 router.get("/recharge_history", tokenVerify, rechargeHistory);
 router.get("/operator_by_phone", tokenVerify, Get_Operator_Circle_By_Phone);
@@ -83,7 +96,7 @@ router.post("/admin/bbps-history", bbpsHistory);
 // router.post("/bbps/bill-fetch", tokenVerify, billFetch);
 router.post("/bbps/bill-payment", tokenVerify, billPayment);
 router.post("/bbps/new-bill-payment", tokenVerify, BILL_PAYMENT);
-router.post("/bbps/googleplay-payment", tokenVerify, googlePlayPayment);
+router.post("/bbps/google-play", tokenVerify, googlePlayPayment);
 router.get("/bbps/bill-history", tokenVerify, billPaymentHistory);
 router.post("/bbps/bill-create-refund", tokenVerify, createRefundBillPayment);
 router.get("/bbps/bill-refund-request", adminTokenVerify, getRefundBillRequest);

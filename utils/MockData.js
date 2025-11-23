@@ -8,7 +8,8 @@ const All_Recharge_Operator_List = [
     Billhub_Operator_code: "airtel",
     Mobikwik_Operator_code: 1,
     Operator_name: "Airtel",
-    img: "https://ik.imagekit.io/43tomntsa/airtel.webp",
+    com_name : "Airtel",
+    img: "uploads/operator/airtel.jpg",
   },
   {
     Ezytm_Operator_code: 5,
@@ -19,7 +20,8 @@ const All_Recharge_Operator_List = [
     Billhub_Operator_code: "jio",
     Mobikwik_Operator_code: 140,
     Operator_name: "JIO",
-    img: "https://ik.imagekit.io/43tomntsa/Jio.webp",
+    com_name : "Jio",
+    img: "uploads/operator/jio.jpg",
   },
   {
     Ezytm_Operator_code: 6,
@@ -30,7 +32,8 @@ const All_Recharge_Operator_List = [
     Billhub_Operator_code: "vi",
     Mobikwik_Operator_code: 338,
     Operator_name: "VI",
-    img: "https://ik.imagekit.io/43tomntsa/VI.webp",
+    com_name : "VI",
+    img: "uploads/operator/vi.jpg",
   },
 
   {
@@ -42,7 +45,8 @@ const All_Recharge_Operator_List = [
     Billhub_Operator_code: "bsnl_topup",
     Mobikwik_Operator_code: 3,
     Operator_name: "BSNL Topup",
-    img: "https://ik.imagekit.io/43tomntsa/Bsnl.webp",
+    com_name : "BSNL",
+    img: "uploads/operator/bsnl.jpg",
   },
   {
     Cyrus_Operator_code: "ATP",
@@ -51,7 +55,7 @@ const All_Recharge_Operator_List = [
     Mobikwik_Operator_code: 29,
 
     Operator_name: "Airtel Postpaid",
-    img: "https://ik.imagekit.io/43tomntsa/airtel.webp",
+    img: "uploads/operator/airtel.jpg",
   },
   {
     Cyrus_Operator_code: "VFP",
@@ -60,7 +64,7 @@ const All_Recharge_Operator_List = [
     Mobikwik_Operator_code: 436,
 
     Operator_name: "VI Postpaid",
-    img: "https://ik.imagekit.io/43tomntsa/airtel.webp",
+    img: "uploads/operator/vi.jpg",
   },
   {
     Cyrus_Operator_code: "RJC",
@@ -69,7 +73,7 @@ const All_Recharge_Operator_List = [
     Mobikwik_Operator_code: 142,
 
     Operator_name: "JIO Postpaid",
-    img: "https://ik.imagekit.io/43tomntsa/airtel.webp",
+    img: "uploads/operator/jio.jpg",
   },
 ];
 
@@ -453,46 +457,48 @@ const All_Recharge_Circle_List = [
     circlename: "West Bengal",
   },
 ];
+
 const All_DTH_Recharge_Operator_List = [
   {
     A1_Operator_code: "ATV",
     Billhub_Operator_code: "airtel_tv",
-    Mobikwik_Operator_code: 23,
+    Mobikwik_Operator_code: 24,
+     planApi_operator_code:24,
     Operator_name: "Airtel TV",
-    img: "https://static.mobikwik.com/appdata/operator_icons/op23.png",
+    img: "uploads/operator/airtel.jpg",
   },
   {
     A1_Operator_code: "DTV",
-
     Billhub_Operator_code: "dish_tv",
     Mobikwik_Operator_code: 18,
+     planApi_operator_code:25,
     Operator_name: "Dish TV",
-    img: "https://static.mobikwik.com/appdata/operator_icons/op18.png",
+    img: "uploads/operator/dish_tv.jpg",
   },
   {
     A1_Operator_code: "TTV",
-
     Billhub_Operator_code: "tata_sky",
     Mobikwik_Operator_code: 19,
+     planApi_operator_code:28,
     Operator_name: "Tata Sky",
-    img: "https://static.mobikwik.com/appdata/operator_icons/op19.png",
+    img: "uploads/operator/tata_sky.jpg",
   },
 
   {
     A1_Operator_code: "STV",
-
     Billhub_Operator_code: "sun_tv",
     Mobikwik_Operator_code: 22,
+    planApi_operator_code:27,
     Operator_name: "Sun Direct",
-    img: "https://static.mobikwik.com/appdata/operator_icons/op22.png",
+    img: "uploads/operator/sun_tv.jpg",
   },
   {
     A1_Operator_code: "VTV",
-
     Billhub_Operator_code: "videocon",
     Mobikwik_Operator_code: 21,
+     planApi_operator_code:29,
     Operator_name: "Videocon DTH",
-    img: "https://static.mobikwik.com/appdata/operator_icons/op21.png",
+    img: "uploads/operator/videocon.jpg",
   },
 ];
 
@@ -23605,9 +23611,43 @@ const ALL_BBPS_OPERATOR_LIST = [
   },
 ];
 
+const circle = [
+  { "ID": 1, "Name": "Delhi - DELHI", "CircleCode": "10" },
+  { "ID": 2, "Name": "Uttar Pradesh (West) - UP(West)", "CircleCode": "97" },
+  { "ID": 3, "Name": "Punjab - PUNJAB", "CircleCode": "02" },
+  { "ID": 4, "Name": "Himachal Pradesh - HP", "CircleCode": "03" },
+  { "ID": 5, "Name": "Haryana - HARYANA", "CircleCode": "96" },
+  { "ID": 6, "Name": "Jammu and Kashmir - J&K", "CircleCode": "55" },
+  { "ID": 7, "Name": "Uttar Pradesh (East) - UP(East)", "CircleCode": "54" },
+  { "ID": 8, "Name": "Mumbai - MUMBAI", "CircleCode": "92" },
+  { "ID": 9, "Name": "Maharashtra - MAHARASHTRA", "CircleCode": "90" },
+  { "ID": 10, "Name": "Gujarat - GUJARAT", "CircleCode": "98" },
+  { "ID": 11, "Name": "Madhya Pradesh - MP", "CircleCode": "93" },
+  { "ID": 12, "Name": "Rajasthan - RAJASTHAN", "CircleCode": "70" },
+  { "ID": 13, "Name": "Kolkata - KOLKATTA", "CircleCode": "31" },
+  { "ID": 14, "Name": "West Bengal - West Bengal", "CircleCode": "51" },
+  { "ID": 15, "Name": "Odisha - ORISSA", "CircleCode": "53" },
+  { "ID": 16, "Name": "Assam - ASSAM", "CircleCode": "56" },
+  { "ID": 17, "Name": "North East States - NESA", "CircleCode": "16" },
+  { "ID": 18, "Name": "Bihar - BIHAR", "CircleCode": "52" },
+  { "ID": 19, "Name": "Karnataka - KARNATAKA", "CircleCode": "06" },
+  { "ID": 20, "Name": "Chennai - CHENNAI", "CircleCode": "40" },
+  { "ID": 21, "Name": "Tamil Nadu - TAMIL NADU", "CircleCode": "94" },
+  { "ID": 22, "Name": "Kerala - KERALA", "CircleCode": "95" },
+  { "ID": 23, "Name": "Andhra Pradesh - AP", "CircleCode": "49" },
+  { "ID": 24, "Name": "Sikkim - SIKKIM", "CircleCode": "99" },
+  { "ID": 25, "Name": "Tripura - TRIPURA", "CircleCode": "100" },
+  { "ID": 26, "Name": "Chhattisgarh - CHHATISGARH", "CircleCode": "101" },
+  { "ID": 27, "Name": "Goa - GOA", "CircleCode": "102" },
+  { "ID": 28, "Name": "Meghalaya - MEGHALAY", "CircleCode": "103" },
+  { "ID": 29, "Name": "Mizoram - MIZZORAM", "CircleCode": "104" },
+  { "ID": 30, "Name": "Jharkhand - JHARKHAND", "CircleCode": "105" }
+]
+
 module.exports = {
   All_Recharge_Operator_List,
   All_Recharge_Circle_List,
   ALL_DTH_Operator_List,
   All_DTH_Recharge_Operator_List,
+  circle,
 };

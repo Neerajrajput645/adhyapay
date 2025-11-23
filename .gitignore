@@ -1,3 +1,5 @@
+.env
 node_modules
-
-common/sendNotification/google-services.json
+doc
+error.log
+success.log
